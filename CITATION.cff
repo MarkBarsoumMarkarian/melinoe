@@ -8,6 +8,8 @@ authors:
   - family-names: Markarian
     given-names: Mark Barsoum
 license: MIT
+repository-code: "https://github.com/MarkBarsoumMarkarian/melinoe"
+url: "https://github.com/MarkBarsoumMarkarian/melinoe"
 abstract: >-
   Melinoe is a local-first cancer-research environment that connects explicit
   patient, specimen, assay, endpoint, and split provenance with deterministic

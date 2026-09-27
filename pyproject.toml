@@ -36,6 +36,12 @@ dependencies = [
   "uvicorn[standard]>=0.34",
 ]
 
+[project.urls]
+Homepage = "https://github.com/MarkBarsoumMarkarian/melinoe"
+Repository = "https://github.com/MarkBarsoumMarkarian/melinoe"
+Issues = "https://github.com/MarkBarsoumMarkarian/melinoe/issues"
+Changelog = "https://github.com/MarkBarsoumMarkarian/melinoe/blob/main/CHANGELOG.md"
+
 [project.optional-dependencies]
 dev = [
   "httpx2>=2.13",

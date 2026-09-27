@@ -37,12 +37,23 @@ contribution.
 
 ## Quick start
 
+Install the published command-line application with `uv`:
+
+```bash
+uv tool install melinoe
+melinoe serve
+```
+
+Alternatively, install it into an existing Python environment with
+`python -m pip install melinoe`. Open `http://127.0.0.1:8787`; the bundled demo
+loads automatically.
+
+For development from a source checkout:
+
 ```bash
 uv sync --extra dev
 uv run melinoe serve
 ```
-
-Open `http://127.0.0.1:8787`. The bundled demo loads automatically.
 
 For a one-command local launch, run `./scripts/run.sh`. If port 8787 is used by
 another application, pass a different port, for example `./scripts/run.sh 8788`.
