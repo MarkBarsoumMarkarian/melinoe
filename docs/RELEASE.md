@@ -3,6 +3,10 @@
 ## 0.4.0 release gate
 
 1. Run `./scripts/verify.sh` on a clean checkout.
+   The live bubblewrap containment probe must pass on a Linux host. GitHub's
+   hosted runner performs the command-contract test but transparently skips
+   this probe because the runner blocks loopback setup in new network
+   namespaces.
 2. Run the public gold-study benchmark and confirm `23/23` checks pass.
 3. Inspect the dashboard evidence panel and generated figures.
 4. Confirm no credentials, signing keys, direct identifiers, absolute home

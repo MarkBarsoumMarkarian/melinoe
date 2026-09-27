@@ -1,4 +1,5 @@
 import json
+import os
 import shutil
 from pathlib import Path
 
@@ -42,10 +43,21 @@ def test_ledger_detects_tampering(tmp_path: Path) -> None:
     assert verification.error is not None
 
 
-def test_sandbox_writes_only_inside_selected_project(tmp_path: Path) -> None:
+def test_sandbox_plan_denies_network_and_scopes_writes(tmp_path: Path) -> None:
     plan = build_sandbox_command(tmp_path, ["/bin/sh", "-c", "printf ok > result.txt"])
     assert plan.network == "denied"
     assert "--unshare-net" in plan.command
+    assert plan.command[plan.command.index("--bind") + 1 : plan.command.index("--bind") + 3] == [
+        str(tmp_path),
+        "/mnt",
+    ]
+
+
+@pytest.mark.skipif(
+    os.environ.get("MELINOE_SKIP_SANDBOX_INTEGRATION") == "1",
+    reason="hosted runner cannot configure loopback in a bubblewrap network namespace",
+)
+def test_sandbox_writes_only_inside_selected_project(tmp_path: Path) -> None:
 
     ledger = AuditLedger(tmp_path / ".melinoe" / "ledger.jsonl")
     result = run_sandboxed(

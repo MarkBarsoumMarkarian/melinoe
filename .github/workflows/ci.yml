@@ -24,4 +24,9 @@ jobs:
       - name: Install bubblewrap and R survival
         run: sudo apt-get update && sudo apt-get install -y bubblewrap r-base r-cran-survival
       - name: Verify release
+        # GitHub-hosted runners block bubblewrap from configuring loopback in a
+        # new network namespace. The command contract is still tested here; the
+        # live containment probe remains mandatory in the local release gate.
+        env:
+          MELINOE_SKIP_SANDBOX_INTEGRATION: "1"
         run: ./scripts/verify.sh
