@@ -1,0 +1,2 @@
+"pairs","mean_cancer_log2_normalized","mean_stroma_log2_normalized","mean_paired_difference","fold_change_from_mean_log2_difference","median_paired_difference","bootstrap_ci_low","bootstrap_ci_high","paired_t_p","paired_wilcoxon_p"
+19,10.3239289866795,7.82118056674313,2.50274841993634,5.66764116518534,1.9467690956615,1.46926850128909,3.64487587014514,0.000382969872490825,0.000231266515260452

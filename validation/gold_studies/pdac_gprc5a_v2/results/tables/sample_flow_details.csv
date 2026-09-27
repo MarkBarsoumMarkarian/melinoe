@@ -1,0 +1,6 @@
+"cohort","accession_samples","eligible_specimen_type","expression_and_survival_complete","excluded_from_survival","exclusion_note"
+"TCGA_PAAD",184,153,145,39,"non-ductal/unspecified histology, missing/nonpositive OS time, non-explicit status, or no matched expression"
+"CPTAC_PAAD",140,135,129,11,"adenosquamous histology or missing/nonpositive OS data"
+"GSE85916",80,80,79,1,"one sample with missing OS time"
+"GSE57495",63,63,63,0,"none"
+"GSE62452",130,69,65,65,"adjacent non-tumour specimens or missing OS data"

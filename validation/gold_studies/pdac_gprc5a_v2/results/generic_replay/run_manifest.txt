@@ -1,0 +1,8 @@
+Melinoe cohort-native survival synthesis
+Generated: 2026-09-27 08:10:39 UTC
+Input file: survival_observations.csv
+Cohorts: 5
+Patients: 481
+Events: 304
+Pooled HR: 1.1623
+No cross-platform harmonization was performed.

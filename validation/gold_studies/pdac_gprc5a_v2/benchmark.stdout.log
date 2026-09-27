@@ -1,0 +1,28 @@
+null device
+          1
+null device
+          1
+null device
+          1
+     cohort                                   platform patients events censored
+  TCGA_PAAD          Illumina RNA-seq; cBioPortal RSEM      145     84       61
+ CPTAC_PAAD    Illumina RNA-seq; CPTAC 2021 cBioPortal      129     72       57
+   GSE85916      GPL13667 Affymetrix Human Genome U219       79     57       22
+   GSE57495 GPL15048 Rosetta/Merck HuRSTA custom array       63     42       21
+   GSE62452       GPL6244 Affymetrix Human Gene 1.0 ST       65     49       16
+ median_followup_or_death_months
+                        14.46559
+                        13.10883
+                        17.99000
+                        21.13333
+                        14.90000
+     cohort   n events hr_per_sd    ci_low  ci_high    p_value
+  TCGA_PAAD 145     84 1.2700361 0.9898779 1.629485 0.06011434
+ CPTAC_PAAD 129     72 0.9175731 0.7153357 1.176986 0.49829783
+   GSE85916  79     57 1.1322988 0.8509335 1.506699 0.39395482
+   GSE57495  63     42 1.3926526 1.0027992 1.934068 0.04808165
+   GSE62452  65     49 1.2421777 0.9105847 1.694522 0.17107180
+ k    log_hr      se_hk       hr    ci_low  ci_high   p_value        tau2
+ 5 0.1504167 0.07568057 1.162318 0.9420412 1.434103 0.1177841 0.008053228
+ i2_percent prediction_low prediction_high
+   28.15409      0.7999743        1.688784

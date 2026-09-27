@@ -1,0 +1,39 @@
+{
+  "format_version": "melinoe-workflow-execution/1.0",
+  "workflow_id": "bulk-transcriptomics",
+  "workflow_version": "1.0.0",
+  "status": "completed",
+  "executed_at": "2026-09-27T08:10:39.523661Z",
+  "execution_engine": "Rscript (R) version 4.5.3 (2026-03-11)",
+  "input_sha256": "caf5368fda644ab510e61c0f669edcdf24469a5b658c217bf3a6d8172d289bfc",
+  "script_sha256": "b738cf573cc8e1a130a6fc3dd66e17bdf7cbcd1ba80fae89e20d4c7dd7e6fc65",
+  "summary": {
+    "cohorts": 5,
+    "patients": 481,
+    "events": 304,
+    "cohort_counts": {
+      "TCGA_PAAD": 145,
+      "CPTAC_PAAD": 129,
+      "GSE85916": 79,
+      "GSE57495": 63,
+      "GSE62452": 65
+    },
+    "cohort_events": {
+      "TCGA_PAAD": 84,
+      "CPTAC_PAAD": 72,
+      "GSE85916": 57,
+      "GSE57495": 42,
+      "GSE62452": 49
+    }
+  },
+  "output_sha256": {
+    "cohort_cox_results.csv": "093875a3667fd0020c5656463b37b8002d94bacef5d4331a133a9d82d663d26f",
+    "cohort_flow.csv": "2f269b7546f8be0bd82be2817320e0d6aec01cd32bfaecdecab5c3359b903ac3",
+    "forest_survival_meta.png": "ad17ad63e52ab1a878eaf229516cfbac6625b8883bcbfca6757416e30bf7c01e",
+    "leave_one_cohort_out.csv": "c9c04fdde73ef488c559ddce7b9c42e8b498c69b1a2e0ed5f02b6b57726c4eec",
+    "random_effects_meta.csv": "1de6258fc60a9ac59e1779d736c3621cdd50ce8e2212769de450e433e128d591",
+    "run_manifest.txt": "a11167f71913a95c6346a817f17dc4a50a9f19ee114e7f3e53fc35b534d976e2",
+    "workflow.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "workflow.stdout.log": "9ece9da562141069ca960faa656f754c4e40998dd4b1f1743bd93ea2310fe643"
+  }
+}

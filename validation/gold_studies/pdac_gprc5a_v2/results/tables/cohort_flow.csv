@@ -1,0 +1,6 @@
+"cohort","platform","patients","events","censored","median_followup_or_death_months"
+"TCGA_PAAD","Illumina RNA-seq; cBioPortal RSEM",145,84,61,14.4655949
+"CPTAC_PAAD","Illumina RNA-seq; CPTAC 2021 cBioPortal",129,72,57,13.1088295687885
+"GSE85916","GPL13667 Affymetrix Human Genome U219",79,57,22,17.99
+"GSE57495","GPL15048 Rosetta/Merck HuRSTA custom array",63,42,21,21.1333333333333
+"GSE62452","GPL6244 Affymetrix Human Gene 1.0 ST",65,49,16,14.9

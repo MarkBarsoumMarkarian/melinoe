@@ -1,0 +1,69 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "melinoe"
+version = "0.4.0"
+description = "A local-first, validity-aware operating environment for multimodal cancer research"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{ name = "Mark Barsoum Markarian" }]
+license = "MIT"
+license-files = ["LICENSE"]
+keywords = [
+  "cancer-research",
+  "bioinformatics",
+  "reproducibility",
+  "survival-analysis",
+  "research-software",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+dependencies = [
+  "cryptography>=44.0",
+  "fastapi>=0.115",
+  "pydantic>=2.10",
+  "typer>=0.15",
+  "uvicorn[standard]>=0.34",
+]
+
+[project.optional-dependencies]
+dev = [
+  "httpx2>=2.13",
+  "pytest>=8.3",
+  "pytest-cov>=6.0",
+  "ruff>=0.9",
+]
+
+[project.scripts]
+melinoe = "melinoe.cli:app"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/melinoe"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"examples/multimodal_demo/project.json" = "melinoe/data/multimodal_demo.json"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+ignore = ["E501"]
+
+[tool.ruff.lint.flake8-bugbear]
+extend-immutable-calls = ["typer.Argument", "typer.Option"]

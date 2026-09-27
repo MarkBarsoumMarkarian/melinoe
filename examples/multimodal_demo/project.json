@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0",
+  "project_id": "melinoe_multimodal_demo",
+  "title": "Multimodal PDAC response study",
+  "disease_context": "Pancreatic ductal adenocarcinoma",
+  "description": "A deliberately flawed demonstration project used to exercise OncoGuard.",
+  "created_at": "2026-09-26T00:00:00Z",
+  "data_sensitivity": "sensitive",
+  "objective": {
+    "question": "Can integrated molecular and pathology features predict treatment response and overall survival in PDAC?",
+    "analysis_type": "multimodal prediction and survival analysis",
+    "primary_outcome": "response",
+    "unit_of_analysis": "patient",
+    "validation_strategy": "discovery with a patient-locked test cohort",
+    "intended_claim_level": "external_validation"
+  },
+  "patients": [
+    {"id": "P001", "diagnosis": "PDAC", "sex": "female", "age_at_diagnosis": 61, "metadata": {"response": "responder"}},
+    {"id": "P002", "diagnosis": "PDAC", "sex": "male", "age_at_diagnosis": 68, "metadata": {"response": "responder"}},
+    {"id": "P003", "diagnosis": "PDAC", "sex": "female", "age_at_diagnosis": 57, "metadata": {"response": "responder", "email": "example@invalid.test"}},
+    {"id": "P004", "diagnosis": "PDAC", "sex": "male", "age_at_diagnosis": 72, "metadata": {"response": "responder"}},
+    {"id": "P005", "diagnosis": "PDAC", "sex": "female", "age_at_diagnosis": 64, "metadata": {"response": "non_responder"}},
+    {"id": "P006", "diagnosis": "PDAC", "sex": "male", "age_at_diagnosis": 59, "metadata": {"response": "non_responder"}},
+    {"id": "P007", "diagnosis": "PDAC", "sex": "female", "age_at_diagnosis": 66, "metadata": {"response": "non_responder"}},
+    {"id": "P008", "diagnosis": "PDAC", "sex": "male", "age_at_diagnosis": 70, "metadata": {"response": "non_responder"}}
+  ],
+  "specimens": [
+    {"id": "S001", "patient_id": "P001", "tissue_type": "primary tumour", "disease_status": "tumour"},
+    {"id": "S002", "patient_id": "P002", "tissue_type": "primary tumour", "disease_status": "tumour"},
+    {"id": "S003", "patient_id": "P003", "tissue_type": "primary tumour", "disease_status": "tumour"},
+    {"id": "S004", "patient_id": "P004", "tissue_type": "primary tumour", "disease_status": "tumour"},
+    {"id": "S005", "patient_id": "P005", "tissue_type": "primary tumour", "disease_status": "tumour"},
+    {"id": "S006", "patient_id": "P006", "tissue_type": "primary tumour", "disease_status": "tumour"},
+    {"id": "S007", "patient_id": "P007", "tissue_type": "primary tumour", "disease_status": "tumour"},
+    {"id": "S008", "patient_id": "P008", "tissue_type": "primary tumour", "disease_status": "tumour"},
+    {"id": "S_ORPHAN", "patient_id": "P999", "tissue_type": "metastasis", "disease_status": "tumour"}
+  ],
+  "assays": [
+    {"id": "RNA001", "specimen_id": "S001", "modality": "bulk_rna", "platform": "Illumina NovaSeq", "batch": "RUN_A", "data_path": "data/rna/shared_counts.tsv"},
+    {"id": "RNA002", "specimen_id": "S002", "modality": "bulk_rna", "platform": "Illumina NovaSeq", "batch": "RUN_A", "data_path": "data/rna/shared_counts.tsv"},
+    {"id": "RNA003", "specimen_id": "S003", "modality": "bulk_rna", "platform": "Illumina NovaSeq", "batch": "RUN_A", "data_path": "data/rna/P003.tsv"},
+    {"id": "RNA004", "specimen_id": "S004", "modality": "bulk_rna", "platform": "Illumina NovaSeq", "batch": "RUN_A", "data_path": "data/rna/P004.tsv"},
+    {"id": "RNA005", "specimen_id": "S005", "modality": "bulk_rna", "platform": "Affymetrix U133 Plus 2.0", "batch": "RUN_B", "data_path": "data/rna/P005.tsv"},
+    {"id": "RNA006", "specimen_id": "S006", "modality": "bulk_rna", "platform": "Affymetrix U133 Plus 2.0", "batch": "RUN_B", "data_path": "data/rna/P006.tsv"},
+    {"id": "RNA007", "specimen_id": "S007", "modality": "bulk_rna", "platform": "Affymetrix U133 Plus 2.0", "batch": "RUN_B", "data_path": "data/rna/P007.tsv"},
+    {"id": "RNA008", "specimen_id": "S008", "modality": "bulk_rna", "platform": "Affymetrix U133 Plus 2.0", "batch": "RUN_B", "data_path": "data/rna/P008.tsv"},
+    {"id": "WSI001", "specimen_id": "S001", "modality": "pathology", "platform": "Aperio AT2", "data_path": "data/wsi/P001.svs"},
+    {"id": "VAR001", "specimen_id": "S001", "modality": "somatic_variant", "platform": "Illumina NovaSeq", "data_path": "data/variants/P001.maf"},
+    {"id": "PRO001", "specimen_id": "S005", "modality": "proteomics", "platform": "Orbitrap", "data_path": "data/proteomics/P005.tsv"},
+    {"id": "ORPHAN001", "specimen_id": "S_ORPHAN", "modality": "spatial", "platform": "Visium", "data_path": "data/spatial/orphan.h5ad"}
+  ],
+  "endpoints": [
+    {"id": "OS001", "patient_id": "P001", "endpoint_type": "overall_survival", "time": 18, "event": true, "time_unit": "months"},
+    {"id": "OS002", "patient_id": "P002", "endpoint_type": "overall_survival", "time": 25, "event": false, "time_unit": "months"},
+    {"id": "OS003", "patient_id": "P003", "endpoint_type": "overall_survival", "time": 12, "event": true, "time_unit": "months"},
+    {"id": "OS004", "patient_id": "P004", "endpoint_type": "overall_survival", "time": 30, "event": false, "time_unit": "months"},
+    {"id": "OS005", "patient_id": "P005", "endpoint_type": "overall_survival", "time": 9, "event": true, "time_unit": "months"},
+    {"id": "OS006", "patient_id": "P006", "endpoint_type": "overall_survival", "time": 14, "event": false, "time_unit": "months"},
+    {"id": "OS007", "patient_id": "P007", "endpoint_type": "overall_survival", "time": 16, "event": false, "time_unit": "months"},
+    {"id": "OS008", "patient_id": "P008", "endpoint_type": "overall_survival", "time": 11}
+  ],
+  "splits": [
+    {"patient_id": "P001", "role": "discovery", "cohort": "A"},
+    {"patient_id": "P002", "role": "discovery", "cohort": "A"},
+    {"patient_id": "P003", "role": "discovery", "cohort": "A"},
+    {"patient_id": "P004", "role": "internal_validation", "cohort": "A"},
+    {"patient_id": "P005", "role": "discovery", "cohort": "A"},
+    {"patient_id": "P006", "role": "discovery", "cohort": "A"},
+    {"patient_id": "P007", "role": "locked_test", "cohort": "A"},
+    {"patient_id": "P008", "role": "locked_test", "cohort": "A"},
+    {"patient_id": "P001", "role": "locked_test", "cohort": "A", "rationale": "Intentional demo error"}
+  ],
+  "settings": {
+    "allow_platform_mixing": false,
+    "minimum_locked_test_patients": 20,
+    "minimum_survival_events": 20
+  },
+  "metadata": {
+    "demo": true,
+    "purpose": "failure-injection fixture"
+  }
+}

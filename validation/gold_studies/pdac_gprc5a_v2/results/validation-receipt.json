@@ -1,0 +1,209 @@
+{
+  "format_version": "melinoe-workflow-validation/1.0",
+  "workflow_id": "bulk-transcriptomics",
+  "workflow_version": "1.0.0",
+  "benchmark_id": "pdac-gprc5a-five-cohort-v2",
+  "validation_status": "passed",
+  "validated_at": "2026-09-27T08:10:39.532452Z",
+  "execution_engine": "Rscript (R) version 4.5.3 (2026-03-11)",
+  "script_sha256": "c3016c73726e66a43188d5dbc9e9a69ad1f59ffc9a919f9b5cce9c30ed5c49ca",
+  "input_manifest_sha256": "8d341c84a2d0d26d7b26337c9651af9c4bb217c9f536bfc3073020974e943251",
+  "patients": 481,
+  "events": 304,
+  "cohorts": 5,
+  "metrics": [
+    {
+      "name": "patients",
+      "observed": 481.0,
+      "expected": 481.0,
+      "absolute_tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "events",
+      "observed": 304.0,
+      "expected": 304.0,
+      "absolute_tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "cohorts",
+      "observed": 5.0,
+      "expected": 5.0,
+      "absolute_tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "pooled_hr",
+      "observed": 1.16231843148536,
+      "expected": 1.16231843148536,
+      "absolute_tolerance": 1e-6,
+      "passed": true
+    },
+    {
+      "name": "pooled_ci_low",
+      "observed": 0.942041180291319,
+      "expected": 0.942041180291319,
+      "absolute_tolerance": 1e-6,
+      "passed": true
+    },
+    {
+      "name": "pooled_ci_high",
+      "observed": 1.43410305667614,
+      "expected": 1.43410305667614,
+      "absolute_tolerance": 1e-6,
+      "passed": true
+    },
+    {
+      "name": "pooled_p",
+      "observed": 0.117784105443416,
+      "expected": 0.117784105443416,
+      "absolute_tolerance": 1e-6,
+      "passed": true
+    },
+    {
+      "name": "i2_percent",
+      "observed": 28.1540864266008,
+      "expected": 28.1540864266008,
+      "absolute_tolerance": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "prediction_low",
+      "observed": 0.799974313354491,
+      "expected": 0.799974313354491,
+      "absolute_tolerance": 1e-6,
+      "passed": true
+    },
+    {
+      "name": "prediction_high",
+      "observed": 1.68878439422082,
+      "expected": 1.68878439422082,
+      "absolute_tolerance": 1e-6,
+      "passed": true
+    },
+    {
+      "name": "paired_tumour_adjacent_n",
+      "observed": 45.0,
+      "expected": 45.0,
+      "absolute_tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "paired_tumour_adjacent_fold_change",
+      "observed": 2.19519839731796,
+      "expected": 2.19519839731796,
+      "absolute_tolerance": 0.00001,
+      "passed": true
+    },
+    {
+      "name": "lcm_cancer_stroma_n",
+      "observed": 19.0,
+      "expected": 19.0,
+      "absolute_tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "lcm_cancer_stroma_fold_change",
+      "observed": 5.66764116518534,
+      "expected": 5.66764116518534,
+      "absolute_tolerance": 0.00001,
+      "passed": true
+    },
+    {
+      "name": "rna_protein_n",
+      "observed": 135.0,
+      "expected": 135.0,
+      "absolute_tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "rna_protein_spearman",
+      "observed": 0.567173934250317,
+      "expected": 0.567173934250317,
+      "absolute_tolerance": 1e-6,
+      "passed": true
+    },
+    {
+      "name": "subtype_interaction_p",
+      "observed": 0.145587197146821,
+      "expected": 0.145587197146821,
+      "absolute_tolerance": 1e-6,
+      "passed": true
+    },
+    {
+      "name": "generic_pooled_hr",
+      "observed": 1.16231843127379,
+      "expected": 1.16231843148536,
+      "absolute_tolerance": 1e-6,
+      "passed": true
+    },
+    {
+      "name": "generic_tcga_hr",
+      "observed": 1.27003607488836,
+      "expected": 1.27003607488836,
+      "absolute_tolerance": 1e-6,
+      "passed": true
+    },
+    {
+      "name": "generic_cptac_hr",
+      "observed": 0.917573070238538,
+      "expected": 0.917573070238538,
+      "absolute_tolerance": 1e-6,
+      "passed": true
+    },
+    {
+      "name": "generic_gse85916_hr",
+      "observed": 1.13229876879188,
+      "expected": 1.13229876879188,
+      "absolute_tolerance": 1e-6,
+      "passed": true
+    },
+    {
+      "name": "generic_gse57495_hr",
+      "observed": 1.39265264296083,
+      "expected": 1.39265264296083,
+      "absolute_tolerance": 1e-6,
+      "passed": true
+    },
+    {
+      "name": "generic_gse62452_hr",
+      "observed": 1.2421776695035,
+      "expected": 1.2421776695035,
+      "absolute_tolerance": 1e-6,
+      "passed": true
+    }
+  ],
+  "output_sha256": {
+    "figures/compartment_expression.png": "9c382ff42d805c962f4baf39eb33cccc5152d632a7f33ed226fd4c419444c4be",
+    "figures/cptac_rna_protein.png": "94753223f69b4e0fcc70f6ba4d9907d43a727474e09f2beb128eaa9b38ae7c09",
+    "figures/forest_survival_meta.png": "fb4c2fd13f52f1873a278a2d2844c15385b1f62cc0b0f39aa7d2000fc4b15f85",
+    "generic_replay/cohort_cox_results.csv": "093875a3667fd0020c5656463b37b8002d94bacef5d4331a133a9d82d663d26f",
+    "generic_replay/cohort_flow.csv": "2f269b7546f8be0bd82be2817320e0d6aec01cd32bfaecdecab5c3359b903ac3",
+    "generic_replay/execution-receipt.json": "c3e91ccc8cd133bfedd5d83dfe5e8e6887d971062b900a6c97c08d5d94a931b5",
+    "generic_replay/forest_survival_meta.png": "ad17ad63e52ab1a878eaf229516cfbac6625b8883bcbfca6757416e30bf7c01e",
+    "generic_replay/leave_one_cohort_out.csv": "c9c04fdde73ef488c559ddce7b9c42e8b498c69b1a2e0ed5f02b6b57726c4eec",
+    "generic_replay/random_effects_meta.csv": "1de6258fc60a9ac59e1779d736c3621cdd50ce8e2212769de450e433e128d591",
+    "generic_replay/run_manifest.txt": "a11167f71913a95c6346a817f17dc4a50a9f19ee114e7f3e53fc35b534d976e2",
+    "generic_replay/workflow.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "generic_replay/workflow.stdout.log": "9ece9da562141069ca960faa656f754c4e40998dd4b1f1743bd93ea2310fe643",
+    "run_manifest.txt": "aaff86a700cee2f72ac986e412bf15f2995860c2b94cf6d0326f98220c27cfc0",
+    "tables/cohort_adjusted_sensitivity.csv": "c9cd8e71d20793478c212b75d32e51ea105d8e06bda8b9e7ee18607b9a62094a",
+    "tables/cohort_cox_results.csv": "2b2e66ec295d2a313cf9b3c909a97ca6c354431a3321b8449abd5e7a0544f487",
+    "tables/cohort_flow.csv": "d2d2cd0b7e2a1b6c54badf6351caeb857b5f4dabaf2b68a7e835dc650d0771ee",
+    "tables/cptac_composition_correlations.csv": "dd6bee080d697a31f267bcb0aa06bb42fb431fdc910c159ecec2abc3d477bfa5",
+    "tables/cptac_rna_protein.csv": "2d75cb669c012fb87ab6d01ad164dbd8a1c0d2dc8d81714d851c08d345612100",
+    "tables/gse164665_lcm_compartment.csv": "130fd3f01bf5fa867f5e52b384b6259288563379b950345cb95669fe6d57f3c6",
+    "tables/gse62452_non_ph_diagnostic.csv": "e05f0dedc1592b7cc3a86c850ea7736f8fe7d496365ae94ca90ee6f85aec5849",
+    "tables/gse62452_tumour_normal.csv": "eb954d368e95513e17a9b02a8906238a5add7257e0c57731d6d3f731da377f72",
+    "tables/gse85916_probe_sensitivity.csv": "80a9e1342cfcf6d91a9de1af02b6cfc9e90a75d9abdec055df2a1d8f60a1df8a",
+    "tables/input_manifest.csv": "8d341c84a2d0d26d7b26337c9651af9c4bb217c9f536bfc3073020974e943251",
+    "tables/leave_one_cohort_out.csv": "4df40718d78fb2eb109f93c83164ece485113e525839a230fb57bf8522d47763",
+    "tables/random_effects_meta.csv": "5f2159e862aa9b85bfb25f93f9a6d61ed84ff205401dcd36433c4ef02053844a",
+    "tables/sample_flow_details.csv": "414f8ee289ed322b76eeb5cb435668158ac140789ff7113f273602195be3c111",
+    "tables/tcga_subtype_cox.csv": "a2c4a41c7ecbab841415519f764fbd437baea7eb1039d80c55c8721894b8dfa1",
+    "tables/tcga_subtype_interaction.csv": "fe997af3cd1dd48a1441cac19b22d50504cb9909a50b5173badb6358462af99a"
+  },
+  "failure_reasons": [],
+  "claim_boundary": "Computational reference validation only; not clinical validation or therapeutic evidence."
+}

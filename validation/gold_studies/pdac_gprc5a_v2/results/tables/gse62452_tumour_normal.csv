@@ -1,0 +1,3 @@
+"comparison","n_tumour","n_normal","mean_log2_difference","fold_change_from_mean_log2_difference","median_log2_difference","p_value"
+"all_samples_unpaired",69,61,1.00942659301497,2.01311081924964,1.15803,1.9046804354506e-11
+"exact_patient_pairs",45,45,1.13435133333333,2.19519839731796,1.01255,6.02610558197165e-08

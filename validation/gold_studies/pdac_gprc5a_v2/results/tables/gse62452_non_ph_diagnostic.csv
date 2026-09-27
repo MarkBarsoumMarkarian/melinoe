@@ -1,0 +1,3 @@
+"cohort","period","intervals","events","hr_per_sd","ci_low","ci_high","time_interaction_p","analysis_status"
+"GSE62452","0-12 months",65,25,0.911586612316843,0.598879660369007,1.38757451078448,0.0189314740076246,"post-hoc proportional-hazards diagnostic"
+"GSE62452",">12 months",38,24,1.83150881135472,1.18225032317238,2.83732172478407,0.0189314740076246,"post-hoc proportional-hazards diagnostic"
